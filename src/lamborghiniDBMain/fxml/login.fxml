@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<Pane id="A2" prefHeight="500" prefWidth="600.0" stylesheets="@aaa.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lamborghiniDBMain.LoadingController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="500.0" prefWidth="600.0" spacing="10.0">
+         <children>
+            <HBox alignment="CENTER_RIGHT" prefHeight="0.0" prefWidth="400.0" spacing="15.0">
+               <children>
+                  <Label text="Login" />
+                  <TextField id="A5" fx:id="login" alignment="CENTER" maxWidth="200.0" prefWidth="200.0" stylesheets="@aaa.css" />
+               </children>
+               <VBox.margin>
+                  <Insets right="200.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="0.0" prefWidth="400.0" spacing="15.0">
+               <children>
+                  <Label text="Password" />
+                  <PasswordField id="A5" fx:id="password" alignment="CENTER" maxWidth="200.0" prefWidth="200.0" stylesheets="@aaa.css" />
+               </children>
+               <VBox.margin>
+                  <Insets right="200.0" />
+               </VBox.margin>
+            </HBox>
+            <Button id="A1" mnemonicParsing="false" onAction="#passwordInit" prefWidth="150.0" stylesheets="@aaa.css" text="Sign In" />
+            <Button id="A1" mnemonicParsing="false" onAction="#toMain" prefWidth="150.0" stylesheets="@aaa.css" text="Back" />
+         </children>
+      </VBox>
+   </children>
+</Pane>

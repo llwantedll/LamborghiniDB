@@ -1,0 +1,32 @@
+#A1{
+    -fx-background-color:#DDDD00;
+    -fx-font-fill:#BDB86B;
+    -fx-font-family:tahoma;
+    -fx-font-size:20px;
+}
+#A1:hover{
+    -fx-background-color:#AAAA66;
+}
+#A2{
+    -fx-background-color:#FFFFAA;
+}
+#A3{
+    -fx-background-color:#FF99AA;
+    -fx-font-fill:#BDB86B;
+    -fx-font-family:tahoma;
+    -fx-font-size:20px;
+}
+#A3:hover{
+    -fx-background-color:#AA8483;
+}
+
+#A4{
+    -fx-background-color:#FFFF33;
+}
+
+#A5{
+    -fx-background-color:#FFFFFF;
+    -fx-border-color: #DDDD00;
+    -fx-border-radius: 3px;
+}
+

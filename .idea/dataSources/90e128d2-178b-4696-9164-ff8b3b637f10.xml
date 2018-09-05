@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="lamborghinidb@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="lamborghinidb">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="phpmyadmin"/>
+    <schema id="7" parent="1" name="test"/>
+    <schema id="8" parent="1" name="myfakas"/>
+    <table id="9" parent="2" name="car"/>
+    <table id="10" parent="2" name="client"/>
+    <table id="11" parent="2" name="clientorder"/>
+    <table id="12" parent="2" name="employee"/>
+    <table id="13" parent="2" name="job"/>
+    <column id="14" parent="9" name="SerialNumber">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="15" parent="9" name="Color">
+      <Position>2</Position>
+      <DataType>set(&apos;Yellow&apos;, &apos;Orange&apos;, &apos;Green&apos;, &apos;Purple&apos;, &apos;Grey&apos;, &apos;Black&apos;)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;Yellow&apos;</DefaultExpression>
+    </column>
+    <column id="16" parent="9" name="Model">
+      <Position>3</Position>
+      <DataType>set(&apos;Reventon&apos;, &apos;Diablo&apos;, &apos;Gallardo&apos;, &apos;Huraccan&apos;, &apos;Aventador&apos;, &apos;Countach&apos;, &apos;Murcielago&apos;)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="17" parent="9" name="Price">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="18" parent="9" name="sold">
+      <Position>5</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <key id="19" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>SerialNumber</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="20" parent="10" name="CardNumber">
+      <Position>1</Position>
+      <DataType>char(16)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="21" parent="10" name="Name">
+      <Position>2</Position>
+      <DataType>char(30)|0</DataType>
+    </column>
+    <column id="22" parent="10" name="TNumber">
+      <Position>3</Position>
+      <DataType>char(30)|0</DataType>
+    </column>
+    <key id="23" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>CardNumber</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="24" parent="11" name="ID">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="25" parent="11" name="Price">
+      <Position>2</Position>
+      <DataType>int(11) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="26" parent="11" name="Data">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="27" parent="11" name="ClientCardNumber">
+      <Position>4</Position>
+      <DataType>char(16)|0</DataType>
+    </column>
+    <column id="28" parent="11" name="Executed">
+      <Position>5</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="29" parent="11" name="jobID">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="30" parent="11" name="ClientCardNumber">
+      <ColNames>ClientCardNumber</ColNames>
+    </index>
+    <index id="31" parent="11" name="jobID">
+      <ColNames>jobID</ColNames>
+    </index>
+    <key id="32" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="33" parent="11" name="ClientCardNumber">
+      <ColNames>ClientCardNumber</ColNames>
+      <RefSchemaName>lamborghinidb</RefSchemaName>
+      <RefTableName>client</RefTableName>
+      <RefColNames>CardNumber</RefColNames>
+    </foreign-key>
+    <foreign-key id="34" parent="11" name="jobID">
+      <ColNames>jobID</ColNames>
+      <RefSchemaName>lamborghinidb</RefSchemaName>
+      <RefTableName>job</RefTableName>
+      <RefColNames>ID</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="35" parent="12" name="PersonnelNumber">
+      <Position>1</Position>
+      <DataType>int(6)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="36" parent="12" name="Name">
+      <Position>2</Position>
+      <DataType>char(30)|0</DataType>
+    </column>
+    <column id="37" parent="12" name="TNumber">
+      <Position>3</Position>
+      <DataType>char(15)|0</DataType>
+    </column>
+    <column id="38" parent="12" name="CardNumber">
+      <Position>4</Position>
+      <DataType>char(16)|0</DataType>
+    </column>
+    <column id="39" parent="12" name="Adress">
+      <Position>5</Position>
+      <DataType>char(30)|0</DataType>
+    </column>
+    <column id="40" parent="12" name="Password">
+      <Position>6</Position>
+      <DataType>char(32)|0</DataType>
+    </column>
+    <column id="41" parent="12" name="Login">
+      <Position>7</Position>
+      <DataType>char(16)|0</DataType>
+    </column>
+    <column id="42" parent="12" name="isAdmin">
+      <Position>8</Position>
+      <DataType>tinyint(1)|0</DataType>
+      <DefaultExpression>&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="43" parent="12" name="isFired">
+      <Position>9</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <key id="44" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PersonnelNumber</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="45" parent="13" name="ID">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="46" parent="13" name="Type">
+      <Position>2</Position>
+      <DataType>set(&apos;Press&apos;, &apos;Body&apos;, &apos;Paint&apos;, &apos;Assembly&apos;)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="47" parent="13" name="EmployeePersonnelNumber">
+      <Position>3</Position>
+      <DataType>int(6)|0</DataType>
+    </column>
+    <column id="48" parent="13" name="CarSerialNumber">
+      <Position>4</Position>
+      <DataType>int(10) unsigned|0</DataType>
+    </column>
+    <column id="49" parent="13" name="JobTime">
+      <Position>5</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <index id="50" parent="13" name="EmployeePersonnelNumber">
+      <ColNames>EmployeePersonnelNumber</ColNames>
+    </index>
+    <index id="51" parent="13" name="CarSerialNumber">
+      <ColNames>CarSerialNumber</ColNames>
+    </index>
+    <key id="52" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ID</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="53" parent="13" name="EmployeePersonnelNumber">
+      <ColNames>EmployeePersonnelNumber</ColNames>
+      <RefSchemaName>lamborghinidb</RefSchemaName>
+      <RefTableName>employee</RefTableName>
+      <RefColNames>PersonnelNumber</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="54" parent="13" name="CarSerialNumber">
+      <ColNames>CarSerialNumber</ColNames>
+      <RefSchemaName>lamborghinidb</RefSchemaName>
+      <RefTableName>car</RefTableName>
+      <RefColNames>SerialNumber</RefColNames>
+      <OnUpdate>cascade</OnUpdate>
+    </foreign-key>
+  </database-model>
+</dataSource>

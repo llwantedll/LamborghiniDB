@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.PasswordField?>
+<BorderPane id="A2" prefHeight="500.0" prefWidth="600.0" stylesheets="@../aaa.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lamborghiniDBMain.AdminModeController">
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_RIGHT" spacing="10.0">
+               <children>
+                  <Label text="Login" />
+                  <TextField fx:id="loginReg" />
+               </children>
+               <VBox.margin>
+                  <Insets right="50.0" />
+               </VBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" spacing="10.0">
+               <children>
+                  <Label text="Pasword" />
+                  <PasswordField fx:id="passwordReg" />
+               </children>
+               <VBox.margin>
+                  <Insets right="50.0" />
+               </VBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="0.0" prefWidth="400.0" spacing="10.0">
+               <children>
+                  <Label text="Name" />
+                  <TextField fx:id="nameReg" />
+               </children>
+               <VBox.margin>
+                  <Insets right="50.0" />
+               </VBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="0.0" prefWidth="400.0" spacing="10.0">
+               <children>
+                  <Label text="Phone number" />
+                  <TextField fx:id="pNumberReg" />
+               </children>
+               <VBox.margin>
+                  <Insets right="50.0" />
+               </VBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="0.0" prefWidth="400.0" spacing="10.0">
+               <children>
+                  <Label text="Card number" />
+                  <TextField fx:id="cardNumberReg" />
+               </children>
+               <VBox.margin>
+                  <Insets right="50.0" />
+               </VBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="0.0" prefWidth="400.0" spacing="10.0">
+               <children>
+                  <Label text="Address" />
+                  <TextField fx:id="adressReg" />
+               </children>
+               <VBox.margin>
+                  <Insets right="50.0" />
+               </VBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT">
+               <children>
+                  <CheckBox fx:id="isAdminReg" alignment="TOP_LEFT" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="27.0" prefWidth="168.0" text="Admin account" textAlignment="CENTER" />
+               </children>
+               <VBox.margin>
+                  <Insets right="50.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" spacing="10.0">
+               <children>
+                  <Button id="A1" mnemonicParsing="false" onAction="#registerConf" prefWidth="100.0" stylesheets="@../aaa.css" text="Register" />
+                  <Button id="A1" mnemonicParsing="false" onAction="#toAdminEmployeeEdit" prefWidth="100.0" stylesheets="@../aaa.css" text="Back" />
+               </children>
+               <VBox.margin>
+                  <Insets right="50.0" />
+               </VBox.margin>
+            </HBox>
+            <Label fx:id="error" alignment="TOP_LEFT" maxWidth="400.0" prefHeight="100.0" prefWidth="43.0" textFill="RED">
+               <VBox.margin>
+                  <Insets left="100.0" />
+               </VBox.margin></Label>
+         </children>
+      </VBox>
+   </center>
+   <right>
+      <HBox prefHeight="100.0" prefWidth="150.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>

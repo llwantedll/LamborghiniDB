@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<Pane id="A2" prefHeight="500.0" prefWidth="600.0" stylesheets="@../aaa.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lamborghiniDBMain.AdminModeController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="500.0" prefWidth="600.0" spacing="10.0">
+         <children>
+            <Button id="A1" mnemonicParsing="false" onAction="#toAdminCarEdit" prefWidth="150.0" stylesheets="@../aaa.css" text="Cars" />
+            <Button id="A1" mnemonicParsing="false" onAction="#toAdminEmployeeEdit" prefWidth="150.0" stylesheets="@../aaa.css" text="Employees" />
+            <Button id="A1" mnemonicParsing="false" onAction="#toAdminClientEdit" prefWidth="150.0" stylesheets="@../aaa.css" text="Clients" />
+            <Button id="A1" mnemonicParsing="false" onAction="#toAdminJobEdit" prefWidth="150.0" stylesheets="@../aaa.css" text="Job" />
+            <Button id="A1" mnemonicParsing="false" onAction="#toAdminClientOrderEdit" prefWidth="150.0" stylesheets="@../aaa.css" text="ClientOrders" />
+            <Button id="A1" mnemonicParsing="false" onAction="#toMain" prefWidth="150.0" stylesheets="@../aaa.css" text="Log out/Back" />
+         </children>
+      </VBox>
+   </children>
+</Pane>

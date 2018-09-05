@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane id="A2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" stylesheets="@aaa.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lamborghiniDBMain.EmployeeModeController">
+   <children>
+      <Button id="A1" layoutX="170.0" layoutY="447.0" mnemonicParsing="false" onAction="#confirmJob" prefHeight="39.0" prefWidth="100.0" stylesheets="@aaa.css" text="Add Job" />
+      <Button id="A1" layoutX="337.0" layoutY="447.0" mnemonicParsing="false" onAction="#back" prefHeight="39.0" prefWidth="100.0" stylesheets="@aaa.css" text="Back" />
+   </children>
+</Pane>

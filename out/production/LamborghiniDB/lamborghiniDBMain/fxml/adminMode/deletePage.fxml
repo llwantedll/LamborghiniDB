@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane id="A2" prefHeight="500.0" prefWidth="600.0" stylesheets="@../aaa.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lamborghiniDBMain.AdminModeController">
+   <children>
+      <HBox alignment="CENTER" layoutX="143.0" layoutY="436.0" prefHeight="50.0" prefWidth="314.0" spacing="10.0">
+         <children>
+            <Button onAction="#toEmployeeList" id="A1" mnemonicParsing="false" prefWidth="80.0" stylesheets="@../aaa.css" text="List" />
+            <Button onAction="#toSubmitPage" id="A1" mnemonicParsing="false" prefWidth="90.0" stylesheets="@../aaa.css" text="Delete" />
+            <Button onAction="#back" id="A1" mnemonicParsing="false" prefWidth="80.0" stylesheets="@../aaa.css" text="Back" />
+         </children>
+      </HBox>
+   </children>
+</Pane>
